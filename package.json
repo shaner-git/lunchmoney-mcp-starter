@@ -1,0 +1,29 @@
+{
+	"name": "lunchmoney-mcp-starter",
+	"version": "0.1.0",
+	"description": "Remote MCP server starter for Lunch Money on Cloudflare Workers.",
+	"private": false,
+	"license": "MIT",
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"typecheck": "tsc --noEmit",
+		"check": "npm run typecheck && npm run test",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.12.4",
+		"@types/node": "^25.3.5",
+		"typescript": "^5.5.2",
+		"vitest": "~3.2.0",
+		"wrangler": "^4.71.0"
+	},
+	"dependencies": {
+		"@cloudflare/workers-oauth-provider": "^0.3.0",
+		"@modelcontextprotocol/sdk": "1.26.0",
+		"agents": "^0.7.5",
+		"zod": "^4.3.6"
+	}
+}
